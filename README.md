@@ -4,6 +4,24 @@
 
 [DEMO](https://savoygu.github.io/vue-runtime)
 
+## Usage
+
+```vue
+import Runtime from 'vue-runtime/src/components/runtime.vue'
+Vue.component('runtime', Runtime)
+
+
+```
+
+OR
+
+```vue
+import Runtime from 'vue-runtime/src/index.js'
+Vue.use(Runtime)
+
+<runtime start="2012-10-25 00:00:00"></runtime>
+```
+
 ## Build Setup
 
 ``` bash
