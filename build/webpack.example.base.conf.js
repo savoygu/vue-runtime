@@ -1,6 +1,6 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var isProduction = process.env.NODE_ENV === 'production'
+var isProduction = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'prepublish'
 
 module.exports = {
   entry: {

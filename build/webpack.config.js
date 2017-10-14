@@ -25,42 +25,42 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            css: 'vue-style-loader!css-loader',
-            less: 'vue-style-loader!css-loader!less-loader',
-            // css: ExtractTextPlugin.extract({
-            //   use: 'css-loader',
-            //   fallback: 'vue-style-loader'
-            // }),
-            // less: ExtractTextPlugin.extract({
-            //   fallback: 'vue-style-loader',
-            //   use: ['css-loader', 'less-loader']
-            // })
+            // css: 'vue-style-loader!css-loader',
+            // less: 'vue-style-loader!css-loader!less-loader',
+            css: ExtractTextPlugin.extract({
+              use: 'css-loader',
+              fallback: 'vue-style-loader'
+            }),
+            less: ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use: ['css-loader', 'less-loader']
+            })
           }
           // other vue-loader options go here
         }
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' }
-        ]
-        // loader: ExtractTextPlugin.extract({
-        //   use: "css-loader",
-        //   fallback: "style-loader"
-        // })
+        // use: [
+        //   {loader: 'style-loader'},
+        //   {loader: 'css-loader'}
+        // ]
+        loader: ExtractTextPlugin.extract({
+          use: "css-loader",
+          fallback: "style-loader"
+        })
       },
       {
         test: /\.less$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'less-loader' }
-        ]
-        // loader: ExtractTextPlugin.extract({
-        //   fallback: 'style-loader',
-        //   use: ['css-loader', 'less-loader']
-        // })
+        // use: [
+        //   {loader: 'style-loader'},
+        //   {loader: 'css-loader'},
+        //   {loader: 'less-loader'}
+        // ]
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'less-loader']
+        })
       },
       {
         test: /\.js$/,
@@ -93,11 +93,10 @@ module.exports = {
       compress: {
         warnings: false
       }
+    }),
+    new ExtractTextPlugin({
+      filename: '../lib/vue-runtime.css',
+      allChunks: true
     })
-    // ,
-    // new ExtractTextPlugin({
-    //   filename: '../lib/progess.css',
-    //   allChunks: true
-    // })
   ]
 }

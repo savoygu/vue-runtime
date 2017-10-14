@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:savoygu@163.com/vue-runtime.git"
+    "url": "git@github.com:savoygu/vue-runtime.git"
   },
   "keywords": [
     "vue",
@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/savoygu@163.com/vue-runtime/issues"
+    "url": "https://github.com/savoygu/vue-runtime/issues"
   },
   "unpkg": "lib/vue-runtime.js",
   "dependencies": {
