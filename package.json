@@ -1,7 +1,7 @@
 {
   "name": "vue-runtime",
   "description": "Past and present you deserve it(过去和现在你值得拥有))",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "savoygu@163.com",
   "main": "lib/vue-runtime.js",
   "files": [
