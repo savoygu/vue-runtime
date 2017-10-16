@@ -88,6 +88,7 @@
     computed: {
       startTime () {
         let time = this.toObject(this.start)
+        console.log(time)
         let padStart = this.padStart
         return `从${time.years}年${time.months + 1}月${time.date}日${padStart(time.hours)}:${padStart(time.minutes)}:${padStart(time.seconds)}开始`
       }
@@ -100,7 +101,10 @@
        * @returns {string}
        */
       padStart (time) {
-        return String(time).padStart(2, '0')
+        if (String.prototype.padStart) {
+          return  String(time).padStart(2, '0')
+        }
+        return ('0' + time).slice(-2)
       },
       /**
        * 获取一个月的最后一天（一个月有多少天）

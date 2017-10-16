@@ -16,10 +16,10 @@
       <template slot="source">
         <div class="source">
           <div class="vd-demo__block vd-demo__block-2">
-            <runtime start="2012-10-25 00:00"></runtime>
+            <runtime start="2017-10-14 12:00:00"></runtime>
           </div>
           <div class="vd-demo__block vd-demo__block-2">
-            <runtime :start="new Date('2012-10-25 00:00')"></runtime>
+            <runtime :start="new Date('2017-10-14 12:00:00')"></runtime>
           </div>
         </div>
       </template>
@@ -35,7 +35,7 @@
       </template>
       <template slot="source">
         <div class="source">
-          <runtime start="2012-10-25 00:00" :units="{month: '月', hour: '时', minute: '分'}"></runtime>
+          <runtime start="2017-10-14 12:00:00" :units="{month: '月', hour: '时', minute: '分'}"></runtime>
         </div>
       </template>
       <template slot="explanation">
@@ -50,10 +50,10 @@
       </template>
       <template slot="source">
         <div class="source">
-          <runtime start="2012-10-25 00:00">
+          <runtime start="2017-10-14 12:00:00">
             <template slot="start">lalala</template>
             <template slot="end">hahaha</template>
-            <template slot="time">从2012年10月25日开始</template>
+            <template slot="time">从2017年10月14日开始</template>
           </runtime>
         </div>
       </template>
